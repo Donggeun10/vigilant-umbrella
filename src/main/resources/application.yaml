@@ -1,0 +1,21 @@
+logging:
+    level:
+        root: info
+        com.example.demo: debug
+        org.springframework.ai.chat.client.advisor: debug
+
+spring:
+    application:
+        name: local-llm-be
+    ai:
+        ollama:
+            base-url: http://172.27.6.8:11435
+            embedding:
+                model: nomic-embed-text
+            chat:
+                model: hf.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-GGUF
+
+
+springdoc:
+    api-docs:
+        path: /swagger-ui.html
